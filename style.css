@@ -1,257 +1,454 @@
-/* * {
-  font-family: "Courier New", Courier, monospace;
+@font-face {
+  font-family: 'Diwani Letter';
+  src: url('DiwaniLetter.woff2') format('woff2'),
+      url('DiwaniLetter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-:root {
-  --primary-color: #211c84;
-  --secondary-color: #4d55cc;
-  --third-color: #7a73d1;
-  --textNav-color: #ffb200;
+
+ body{
+    margin: 0;
+ }
+ :root {
+  --primary-color: #211C84;
+  --secondary-color: #4D55CC;
+  --third-color: #7A73D1;
+  --textNav-color: #FFB200;
   --BG-color: #eeeeee;
-} */
-
-/* Start Hover line for footer and nav */
-
-/* End Hover line for footer and nav */
-body {
-  font-family: "Tajawal", sans-serif;
-  background-color: #eeeeee; /* لون خلفية داكن */
-  color: #111827;
-  margin: 0;
-  padding: 0;
 }
+ @font-face {
+    font-family: 'olikni,';
+    src: url('oiilkn.woff2') format('woff2'),
+        url('oiilkn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+nav{
+  background-color: #333;
 
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
-/* الشريط العلوي */
-.navbar {
-  background-color: #1f2937; /* لون خلفية الشريط */
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.nav-style {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 10;
+  flex-direction: row-reverse;
+	background-color: transparent;
 
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fbbf24; /* لون العنوان */
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar ul li a {
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #fbbf24; /* لون عند التمرير */
-}
-
-/* قسم البطل */
-.hero {
-  background: linear-gradient(to right, #4a5568, #6b46c1); /* تدرج لوني */
-  padding: 6rem 2rem;
-  text-align: center;
-  position: relative;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  animation: pulse 2s infinite;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
-}
-
-.hero a {
-  background-color: white;
-  color: #4a5568;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-.hero a:hover {
-  background-color: #e2e8f0;
-}
-
-/* قسم المبادرات */
-.initiatives {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.initiatives h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fbbf24;
-  margin-bottom: 3rem;
-}
-
-.initiative-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.initiative-card {
-  background:#004185;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #004185;
-  transition: transform 0.3s ease;
-  transition: 0.3s;
-}
-
-.initiative-card:hover {
-  transform: scale(1.05);
-  box-shadow: 5px 5px 5px #0c74e385;
-}
-
-.initiative-card h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fbbf24;
-  margin-bottom: 1rem;
-}
-
-.initiative-card p {
-  color: #eeeeee;
-}
-
-/* التذييل */
-.footer {
-  background-color: #004185;
-  padding: 4rem 2rem;
-  margin-top: 4rem;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.footer h3, .footer h4 {
-  color: #fbbf24;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-.footer p, .footer a {
-  color: #d1d5db;
-}
-
-.footer ul {
-    list-style: none; 
-   
-}
-.footer a:hover {
-  color: #fbbf24;
-}
-
-.footer .border-top {
-  border-top: 1px solid #4a5568;
-  padding-top: 2rem;
-  text-align: center;
-}
-
-/* تأثير النبض */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-
-.more-info {
-  padding: 80px 16px;
-  text-align: center;
-}
-.more-info h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #ecc94b;
-  margin-bottom: 20px;
-}
-.more-info p {
-  color: #e2e8f0;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.more-info a {
-  background-color: #ecc94b;
-  color: #2d3748;
-  padding: 16px 32px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s;
-}
-.more-info a:hover {
-  background-color: #fbd38d;
-}
-
-/* Video Section */
-.video-section {
-  padding: 80px 16px;
-  text-align: center;
-}
-.video-section iframe {
-  width: 100%;
-  height: 400px;
-}
-.about-us {
-  margin-top: 100px;
-    padding: 4rem 2rem;
+	width: 100%;
+  color: #FFB200;
+	height: 60px;
+	top: 0;
+	padding: 10px 0;
+  }
+  
+  @font-face {
+    font-family: 'BOONE Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('BOONE Regular'), url('BOONE.woff') format('woff');
+    }
+  
+  .nav-links a {
+    font-family: "Amiri", serif;
+    font-weight: 500;
+	color: #FFB200;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  font-size: 25px;
+	position: relative;
+	top: 15px;
+  }
+  .login-nav{
+    font-family: "Amiri", serif;
+    font-weight: 500;
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  font-size: 20px;
+	position: relative;
+	top: 15px;
+  }
+  .login-btn{
+    border-radius: 10px;
+    padding: 10px 10px;
+    position: relative;
+    bottom: 10px;
+    text-decoration: none;
+    background-color: #FFB200;
+    border: #211C84 1px solid;
+    color: #211C84;
+  }
+  .brand-name a {
+	font-size: 36px;
+	position: relative;
+  bottom: 20px;
+  color: #FFB200;
+  font-family: "Amiri", serif;
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  
+  .nav-icons i {
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  }
+  
+  
+  .nav-style.scrolled {
+	background-color: #004185; 
+	color: rgb(255, 255, 255);
+  }
+  
+  .nav-style.scrolled a,
+  .nav-style.scrolled i {
+	color: rgb(255, 255, 255); 
+  }
+  
+  .nav-links a:hover,
+  .brand-name a:hover,
+  .nav-icons i:hover {
+	color: rgb(255, 255, 255); 
+  }
+  .brand-name img{
+    width: 180px;
+    position: relative;
+    bottom: 40px;
+  }
+	
+  .hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url('Screenshot\ 2025-03-17\ 130908.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: row-reverse;
+  }
+  .hero img{
+    position: relative;
+    top: 70px;
+    width:600px;
+    right: 340px;
+    height: auto;
+  }
+  .login-btn:hover{
+    background-color: #ffffff;
+    transform: scale(1.05);
+    color: #FFB200;
+  }
+  .hero-div button{
+    background-color: #FFB200;
+    color: #211C84;
+    font-size: 26px;
+    font-family: "Amiri", serif;
+    border-radius: 10px;
+    border:  1px solid #FFB200;
+    padding: 5px 15px;
+    position: relative;
+    left: 200px;
+  }
+  .hero-div button:hover{
+    background-color: #FFC080;
+    cursor: pointer;
+    transform: scale(1.04);
+    color: white;
+  }
+  .hero-title{
+    color: white;
+    font-size: 80px;
     text-align: center;
-    background-color: #eeeeee ;
-    border: 1px solid #eeeeee;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    box-shadow: 5px 5px 5px #cccccc ,-5px -5px 5px #cccccc;
-    border-radius: 15px;
-}
 
-.about-us h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
+    position: relative;
+  }
+  .hero-paragraph{
     color: #FFB200;
-    margin-bottom: 2rem;
-}
+    text-align: center;
+    font-size: 25px;
+    
+  }
+  .hero-div{
+    position: relative;
+    top: 120px;
+    
+    right: 190px;
+  }
+  @media screen and (max-width: 1200px){
+    .nav-style{
+      font-size: 20px;
+    }
+    .hero img{
+      position: relative;
+      top: 110px;
+      width: 500px;
+      left: px;
+      right: 120px;
+    }
+    .hero-title{
+      color: white;
+      font-size: 60px;
+      position: relative;
+      left: 90px;
+    }
+    .hero-paragraph{
+      color: #FFB200;
+      text-align: center;
+      font-size: 20px;
+      position: relative;
+      left: 80px;
+      
+    }
+    .hero-div button{
+      background-color: #FFB200;
+      color: #211C84;
+      font-size: 26px;
+      font-family: "Amiri", serif;
+      border-radius: 10px;
+      border:  1px solid #FFB200;
+      padding: 5px 15px;
+      position: relative;
+      left: 300px;
+    }
+  }
 
-.about-us p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #333;
-}
-
-.about-us .highlight {
+@media screen and (max-width: 850px){
+  
+  .hero img{
+    position: relative;
+    left: 0px;
+    top: 200px;
+    width: 100%;
+    .nav-links a {
+      font-family: "Amiri", serif;
+      font-weight: 500;
     color: #FFB200;
-    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 10px;
+    font-size: 25px;
+    position: relative;
+    top: 15px;
+    }
+    .login-nav{
+      font-family: "Amiri", serif;
+      font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 10px;
+    font-size: 10px;
+    position: relative;
+    top: 15px;
+    }
+    .login-btn{
+      border-radius: 10px;
+      padding: 10px 10px;
+      position: relative;
+      bottom: 10px;
+      text-decoration: none;
+      background-color: #FFB200;
+      border: #211C84 1px solid;
+      color: #211C84;
+    }
+    .brand-name a {
+    font-size: 16px;
+    position: relative;
+    bottom: 20px;
+    color: #FFB200;
+    font-family: "Amiri", serif;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+  }
+  .hero-title{
+    color: white;
+    text-align: center;
+    position: relative;
+    left:180px;
+  }
+  .hero-paragraph{
+    color: #FFB200;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    left: 180px;
+    
+  }
+ 
+   .hero-div button{
+    background-color: #FFB200;
+    color: #211C84;
+    font-size: 16px;
+    font-family: "Amiri", serif;
+    border-radius: 10px;
+    border:  1px solid #FFB200;
+    padding: 5px 15px;
+    position: relative;
+    left: 500px;
+    top:30px
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 390px){
+  .nav-links a {
+    font-family: "Amiri", serif;
+    font-weight: 500;
+	color: #FFB200;
+  display: none;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  font-size: 25px;
+	position: relative;
+	top: 15px;
+  }
+  .login-nav{
+    font-family: "Amiri", serif;
+    font-weight: 500;
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  font-size: 20px;
+	position: relative;
+	top: 15px;
+  }
+  .login-btn{
+    border-radius: 10px;
+    padding: 10px 10px;
+    position: relative;
+    bottom: 10px;
+    display: none;
+    text-decoration: none;
+    background-color: #FFB200;
+    border: #211C84 1px solid;
+    color: #211C84;
+  }
+  .brand-name a {
+	font-size: 36px;
+	position: relative;
+  bottom: 20px;
+
+  color: #FFB200;
+  font-family: "Amiri", serif;
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  .hero img{
+    position: relative;
+    top: 170px;
+    width: 200px;
+    right: 0px;
+  }
+  .hero-title{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 170px;
+    top: 30px;
+  }
+  .hero-paragraph{
+    color: #FFB200;
+    text-align: center;
+    width: 210px;
+    font-size: 17px;
+    position: relative;
+    left: 160px;
+    top: 40px;
+    
+  }
+  .hero-div button{
+    background-color: #FFB200;
+    color: #211C84;
+    font-size: 16px;
+    font-family: "Amiri", serif;
+    border-radius: 10px;
+    border:  1px solid #FFB200;
+    padding: 5px 15px;
+    position: relative;
+    left: 0px;
+    top:70px
+  }
+}
+@media screen and (max-width: 390px){
+ 
+  .hero img{
+    position: relative;
+    top: 170px;
+    width: 100%;
+    right: 0px;
+  }
+  .hero-title{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 190px;
+    top: 0px;
+  }
+  .hero-paragraph{
+    color: #FFB200;
+    text-align: center;
+    width: 210px;
+    font-size: 17px;
+    position: relative;
+    left: 270px;
+    top: 0px;
+    
+  }
+  .hero-div button{
+    left:340px;
+    bottom:110px ;
+    top: 0;
+
+
+  }
+}
+@media screen and (max-width: 620px){
+  .nav-links a {
+    font-family: "Amiri", serif;
+    font-weight: 500;
+	color: #FFB200;
+  display: none;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  font-size: 25px;
+	position: relative;
+	top: 15px;
+  }
+  .login-nav{
+    font-family: "Amiri", serif;
+    font-weight: 500;
+	transition: color 0.3s ease;
+	padding: 10px 10px;
+  font-size: 20px;
+	position: relative;
+	top: 15px;
+  }
+  .login-btn{
+    border-radius: 10px;
+    padding: 10px 10px;
+    position: relative;
+    bottom: 10px;
+    display: none;
+    text-decoration: none;
+    background-color: #FFB200;
+    border: #211C84 1px solid;
+    color: #211C84;
+  }
+  .hero-div button{
+    left:380px;
+    bottom:110px ;
+    top: 0;
+
+
+  }
 }
