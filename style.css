@@ -11,43 +11,7 @@
 } */
 
 /* Start Hover line for footer and nav */
-body a {
-  font-style: italic;
-  text-transform: uppercase;
-  position: relative;
-  text-decoration: none;
-  /* color: ; */
-  font-size: 16px;
-}
 
-body a::after {
-  content: "";
-  position: absolute;
-  height: 1.5px;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  /* background-color: ; */
-  transition: width 0.5s;
-}
-
-body a:hover::after {
-  width: 100%;
-}
-body a::before {
-  content: "";
-  position: absolute;
-  height: 1.5px;
-  right: 0;
-  bottom: -2px;
-  width: 0;
-  /* background-color: ; */
-  transition: width 0.5s ease;
-}
-
-body a:hover::before {
-  width: 100%;
-}
 /* End Hover line for footer and nav */
 body {
   font-family: "Tajawal", sans-serif;
