@@ -1,14 +1,17 @@
-* {
+/* * {
   font-family: "Courier New", Courier, monospace;
 }
 
 :root {
-  --primary-color: ;
-  --secondary-color: ;
-}
+  --primary-color: #211c84;
+  --secondary-color: #4d55cc;
+  --third-color: #7a73d1;
+  --textNav-color: #ffb200;
+  --BG-color: #eeeeee;
+} */
 
 /* Start Hover line for footer and nav */
-a {
+body a {
   font-style: italic;
   text-transform: uppercase;
   position: relative;
@@ -17,7 +20,7 @@ a {
   font-size: 16px;
 }
 
-a::after {
+body a::after {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -28,10 +31,10 @@ a::after {
   transition: width 0.5s;
 }
 
-a:hover::after {
+body a:hover::after {
   width: 100%;
 }
-a::before {
+body a::before {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -42,7 +45,218 @@ a::before {
   transition: width 0.5s ease;
 }
 
-a:hover::before {
+body a:hover::before {
   width: 100%;
 }
 /* End Hover line for footer and nav */
+body {
+  font-family: "Tajawal", sans-serif;
+  background-color: #111827; /* لون خلفية داكن */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+ /* تنسيق عام */
+ body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #111827; /* لون خلفية داكن */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* الشريط العلوي */
+.navbar {
+  background-color: #1f2937; /* لون خلفية الشريط */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fbbf24; /* لون العنوان */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #fbbf24; /* لون عند التمرير */
+}
+
+/* قسم البطل */
+.hero {
+  background: linear-gradient(to right, #4a5568, #6b46c1); /* تدرج لوني */
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero a {
+  background-color: white;
+  color: #4a5568;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+  background-color: #e2e8f0;
+}
+
+/* قسم المبادرات */
+.initiatives {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.initiatives h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fbbf24;
+  margin-bottom: 3rem;
+}
+
+.initiative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.initiative-card {
+  background: linear-gradient(to bottom right, #1f2937, #111827);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #fbbf24;
+  transition: transform 0.3s ease;
+}
+
+.initiative-card:hover {
+  transform: scale(1.05);
+}
+
+.initiative-card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fbbf24;
+  margin-bottom: 1rem;
+}
+
+.initiative-card p {
+  color: #d1d5db;
+}
+
+/* التذييل */
+.footer {
+  background-color: #1f2937;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer h3, .footer h4 {
+  color: #fbbf24;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.footer p, .footer a {
+  color: #d1d5db;
+}
+
+.footer a:hover {
+  color: #fbbf24;
+}
+
+.footer .border-top {
+  border-top: 1px solid #4a5568;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+/* تأثير النبض */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+.more-info {
+  padding: 80px 16px;
+  text-align: center;
+}
+.more-info h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ecc94b;
+  margin-bottom: 20px;
+}
+.more-info p {
+  color: #e2e8f0;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.more-info a {
+  background-color: #ecc94b;
+  color: #2d3748;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+.more-info a:hover {
+  background-color: #fbd38d;
+}
+
+/* Video Section */
+.video-section {
+  padding: 80px 16px;
+  text-align: center;
+}
+.video-section iframe {
+  width: 100%;
+  height: 400px;
+}
