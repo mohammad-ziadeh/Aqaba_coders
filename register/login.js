@@ -65,6 +65,6 @@ if (btn) {
       password: pass.value,
     });
     sessionStorage.setItem("users", JSON.stringify(savedUsers));
-    window.location.href = "cards.html";
+    window.location.href = "../index.html";
   });
 }
