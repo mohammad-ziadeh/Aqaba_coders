@@ -1,0 +1,24 @@
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #1a202c;
+    color: white;
+}
+.navbar-custom {
+    background-color: #2d3748;
+}
+.gradient-header {
+    background: linear-gradient(to right, #f59e0b, #ea580c);
+}
+.table-custom th, .table-custom td {
+    border: 1px solid #f59e0b;
+    padding: 15px;
+}
+.btn-custom {
+    background-color: #f59e0b;
+    color: #1a202c;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background-color: #d97706;
+}
